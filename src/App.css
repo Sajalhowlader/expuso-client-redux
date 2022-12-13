@@ -4,7 +4,14 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-img{
-  width: 100;
-  height: auto;
+img {
+  width: 100%;
+ 
+}
+.header_container {
+  box-shadow: -1px 0px 4px 0px #070e1259;
+  background: linear-gradient(70deg, #9d58dd7a, transparent);
+}
+.get-start {
+  box-shadow: 2px 3px 1px 0px #00000061;
 }

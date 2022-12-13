@@ -1,9 +1,11 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import routes from "./Routes/Routes";
 
 function App() {
   return (
     <section className="App">
-      <div className="bg-indigo-700">Hello Tailwind</div>
+      <RouterProvider router={routes} />
     </section>
   );
 }
