@@ -1,16 +1,18 @@
+import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import store from "./Redux/store";
+
 import routes from "./Routes/Routes";
 
 function App() {
-  var today = new Date();
-  var time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  console.log(time);
+ 
 
   return (
     <section className="App">
-      <RouterProvider router={routes} />
+      <Provider store={store}>
+        <RouterProvider router={routes} />
+      </Provider>
     </section>
   );
 }
