@@ -18,7 +18,14 @@ const Blogs = () => {
     allblogs = blogs.map((blog) => <Blog blog={blog} key={blog._id} />);
   }
 
-  return <section>{allblogs}</section>;
+  return <section className="py-10">
+    <h2 className="text-center font-bold text-4xl py-4 mb-5 border-b-2 border-indigo-900">My Blogs</h2>
+    <div className="updates  flex gap-4 justify-center">
+      <button className="bg-indigo-500 py-1 px-3 text-white font-bold rounded-md">First Upload</button>
+      <button className="bg-indigo-500 py-1 px-3 text-white font-bold rounded-md">Last Upload</button>
+    </div>
+    {allblogs}
+    </section>;
 };
 
 export default Blogs;
