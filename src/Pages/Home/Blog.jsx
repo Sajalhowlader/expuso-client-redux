@@ -2,8 +2,19 @@ import React from "react";
 import { BiTime } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdOutlineDateRange } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import getSingleBlog from "../../Redux/Thunk/FetchSingleBlog";
 const Blog = ({ blog }) => {
-  const { image, title, author, time, date, content } = blog;
+ 
+  const { _id, image, title, author, time, date, content } = blog;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigateBlogDetais = (id) => {
+  
+    navigate(`/blogsDetails/${id}`);
+  };
+
   return (
     <div className="blog_info w-3/5 mx-auto my-10">
       <img src={image} alt="" className="max-w-full rounded-lg" />
@@ -24,7 +35,12 @@ const Blog = ({ blog }) => {
       </div>
       <p className="py-2">{content.slice(0, 250) + "..."}</p>
       <div className="flex justify-end">
-        <button className="text-[#ff006a] font-bold">See More..</button>
+        <button
+          onClick={() => navigateBlogDetais(_id)}
+          className="text-[#ff006a] font-bold"
+        >
+          See More..
+        </button>
       </div>
     </div>
   );
