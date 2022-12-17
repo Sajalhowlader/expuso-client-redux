@@ -10,7 +10,7 @@ const Blogs = () => {
   }, []);
   const state = useSelector((state) => state);
   // console.log(state);
-
+console.log(state)
   let allblogs;
   const blogs = useSelector((state) => state.blogs);
   

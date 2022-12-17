@@ -33,7 +33,7 @@ const Blog = ({ blog }) => {
           <span>{time}</span>
         </div>
       </div>
-      <p className="py-2">{content.slice(0, 250) + "..."}</p>
+      <p className="py-2">{content?.slice(0, 250) + "..."}</p>
       <div className="flex justify-end">
         <button
           onClick={() => navigateBlogDetais(_id)}

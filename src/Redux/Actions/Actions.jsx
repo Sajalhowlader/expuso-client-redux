@@ -1,4 +1,4 @@
-import { LOAD_BLOGS, SEE_MORE } from "../ActionTypes/ActionTypes"
+import { ADD_BLOG, LOAD_BLOGS, SEE_MORE } from "../ActionTypes/ActionTypes"
 
 export const loadBlogs = (blogs) =>{
     return{
@@ -9,6 +9,12 @@ export const loadBlogs = (blogs) =>{
 export const semoreContent = (blogs) =>{
     return{
         type: SEE_MORE,
+        payload: blogs
+    }
+}
+export const addABlog = (blogs) =>{
+    return{
+        type: ADD_BLOG,
         payload: blogs
     }
 }
