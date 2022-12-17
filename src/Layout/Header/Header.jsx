@@ -30,7 +30,7 @@ const Header = () => {
           <NavLink className="mx-[6px] text-lg" to="/">
             About
           </NavLink>
-          <NavLink className="mx-[6px] text-lg" to="/">
+          <NavLink className="mx-[6px] text-lg" to="/dashboard/addBlog">
             Dashboard
           </NavLink>
           <NavLink
