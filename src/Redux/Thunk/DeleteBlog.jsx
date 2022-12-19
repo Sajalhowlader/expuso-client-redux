@@ -5,7 +5,7 @@ const deleteABlog = (blogId) => {
     const sure = window.confirm("Are You Want To Delete ?");
     if (sure) {
       const response = await fetch(
-        `expuso.up.railway.app/deleteBlog/${blogId}`,
+        `http://expuso.up.railway.app/deleteBlog/${blogId}`,
         {
           method: "DELETE",
           headers: {

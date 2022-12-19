@@ -2,7 +2,7 @@ import { addABlog } from "../Actions/Actions";
 
 const addANewBlog = (blog) => {
   return async (dispatch, getState) => {
-    const sendNewBlog = await fetch("expuso.up.railway.app/addABlog", {
+    const sendNewBlog = await fetch("http://expuso.up.railway.app/addABlog", {
       method: "POST",
       body: JSON.stringify(blog),
       headers: {
