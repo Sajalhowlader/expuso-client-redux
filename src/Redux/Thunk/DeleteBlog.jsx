@@ -1,11 +1,12 @@
 import { deleteBlog } from "../Actions/Actions";
 
 const deleteABlog = (blogId) => {
+  console.log(blogId);
   return async (dispatch, getState) => {
     const sure = window.confirm("Are You Want To Delete ?");
     if (sure) {
       const response = await fetch(
-        `http://expuso.up.railway.app/deleteBlog/${blogId}`,
+        `https://expusoserver-production.up.railway.app/deleteBlog/${blogId}`,
         {
           method: "DELETE",
           headers: {

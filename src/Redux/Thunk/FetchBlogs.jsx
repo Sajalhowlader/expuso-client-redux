@@ -2,7 +2,9 @@ import { loadBlogs } from "../Actions/Actions";
 
 const fetchBlogs = () => {
   return async (dispatch, getState) => {
-    const response = await fetch("http://expuso.up.railway.app/blogs");
+    const response = await fetch(
+      "https://expusoserver-production.up.railway.app/blogs"
+    );
     const data = await response.json();
 
     if (data.length) {
