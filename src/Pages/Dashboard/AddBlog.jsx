@@ -6,11 +6,12 @@ import addANewBlog from "../../Redux/Thunk/AddNewBlog";
 const AddBlog = () => {
   const time = moment().format("LTS");
   const date = moment().format("MMM Do YY");
-const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     setError,
+    reset,
     formState: { errors },
   } = useForm();
   const addNewBlog = (data) => {
@@ -22,7 +23,8 @@ const dispatch = useDispatch()
       date: data.blogDate,
       content: data.blogContent,
     };
-    dispatch(addANewBlog(blog))
+    dispatch(addANewBlog(blog));
+    reset();
   };
   return (
     <div className="flex h-[100%] justify-center items-center">

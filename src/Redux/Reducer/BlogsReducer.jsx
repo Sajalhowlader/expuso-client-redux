@@ -1,4 +1,10 @@
-import { LOAD_BLOGS, SEE_MORE } from "../ActionTypes/ActionTypes";
+import {
+  ADD_BLOG,
+  DELETE_BLOG,
+  LOAD_BLOGS,
+  SEE_MORE,
+  UPDATE_BLOG,
+} from "../ActionTypes/ActionTypes";
 
 const initialState = {
   blogs: [],
@@ -15,6 +21,21 @@ const blogsReducer = (state = initialState, action) => {
       return {
         ...state,
         seemore: action.payload,
+      };
+    case ADD_BLOG:
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
+      };
+    case DELETE_BLOG:
+      return {
+        ...state,
+        blogs: state.blogs.filter((blog) => blog._id !== action.payload),
+      };
+    case UPDATE_BLOG:
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
       };
     default:
       return state;
